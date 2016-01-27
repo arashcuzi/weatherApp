@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A weather app</title>
+
+    <!-- Bootstrap - Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Open Sans -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Site stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="main" class="container">
+        <section>
+            <div class="form-group">
+                <label for="search">Get the weather:</label>
+                <input type="text" class="form-control" id="search" placeholder="Enter a city name...">
+            </div>
+            <button id="search-button" class="btn btn-primary">Search</button>
+        </section>
+        <section>
+            <div class="panel panel-default">
+                <div class="panel-heading"><span id="main-icon"></span>Weather in <span id="city"></span> for <span id="today"></span></div>
+                <div class="panel-body">
+                   <div id="weather">
+                       <ul class="list-group">
+                           <li class="list-group-item">Weather: <span id="current-weather"></span></li>
+                           <li class="list-group-item">Temperature: <span id="current-temp"></span></li>
+                           <li class="list-group-item">Min Temperature: <span id="min"></span></li>
+                           <li class="list-group-item">Max Temperature: <span id="max"></span></li>
+                           <li class="list-group-item">Humidity: <span id="humidity"></span></li>
+                           <li class="list-group-item">Pressure: <span id="pressure"></span></li>
+                           <li class="list-group-item">Wind Speed: <span id="wind-speed"></span></li>
+                           <li class="list-group-item">Wind Direction: <span id="wind-direction"></span></li>
+                       </ul>
+                   </div>
+                   <div id="map">
+                       a map
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="panel panel-default">
+                <div class="panel-heading">Five Day Forcast</div>
+                <div class="panel-body">
+                    <div id="forecast">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th><th>Forecast</th><th>High</th><th>Low</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>placeholder</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+    <!-- js mainfile -->
+    <script type="text/javascript" src="main.js"></script>
+
+    <!-- Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDJ4B91rTLql9hH0BkVbZC7IMeuMWlWmA&callback=initMap" async defer></script>
+</body>
+</html>
